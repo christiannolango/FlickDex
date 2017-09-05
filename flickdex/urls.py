@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
+	url(r'^admin/', admin.site.urls),
 	url(r'^movielist/', include ('movielist.urls')),
-    url(r'^admin/', admin.site.urls),
+	url(r'^$', include('homepage.urls')),  #r'^$' means that if there is no url extension then send to homepage
 ]

@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+	'homepage',
+	'movielist',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,9 +78,9 @@ WSGI_APPLICATION = 'flickdex.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'movielistBase',
-		'USER': 'movieDex_admin1',
-		'PASSWORD': 'movieDexRedfin',
+        'NAME': 'FlickList',
+		'USER': 'FlickList_admin',
+		'PASSWORD': 'FlickList_password',
 		'HOST': 'localhost',
 		'PORT': '3306',
 		
