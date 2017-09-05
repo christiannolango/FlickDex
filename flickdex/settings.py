@@ -23,6 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+SECRET_KEY = 'q_w&v79-bg8i)s)dhj)=$eps88rvxd#k6fh%2n*u#_iu7&2%86'
+
 ALLOWED_HOSTS = []
 
 
@@ -73,8 +75,13 @@ WSGI_APPLICATION = 'flickdex.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'movielistBase',
+		'USER': 'movieDex_admin1',
+		'PASSWORD': 'movieDexRedfin',
+		'HOST': 'localhost',
+		'PORT': '3306',
+		
     }
 }
 
